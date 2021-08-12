@@ -1,0 +1,31 @@
+.about {
+    padding: 4em;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+}
+
+.about__texts {
+    text-align: center;
+}
+
+.about__subtitle {
+    color: var(--white-color);
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.about__number {
+    text-decoration: none;
+    color: var(--fourthly-color);
+    font-size: 1.5rem;
+    transition: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.about__number:hover {
+    color: var(--thirdly-color);
+    transform: rotate(15deg);
+}

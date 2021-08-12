@@ -1,0 +1,27 @@
+.card {
+    background-color: var(--fourthly-color);
+    border-radius: 0.2em;
+}
+
+.card__image {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+    border-top-left-radius: 0.2em;
+    border-top-right-radius: 0.2em;
+}
+
+.card__body {
+    padding: 0.3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__title {
+    flex-grow: 1;
+}
+
+.card__description {
+    flex-grow: 2;
+}

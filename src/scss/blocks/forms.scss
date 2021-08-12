@@ -1,0 +1,91 @@
+//* FORM CONTACT
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.form__group {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.form__label {
+    font-weight: 800;
+}
+
+.form__input {
+    grid-column: 2 / 3;
+    padding: 1em;
+    resize: none;
+    border: 0;
+    outline: 0;
+    border-radius: 2px;
+}
+
+.form__input:focus {
+    background-color: #f29f0561;
+}
+
+.form__input--message {
+    height: 9em;
+}
+
+.form__checkbox {
+    font-weight: bold;
+}
+
+.form__button {
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+    padding: 1rem;
+    border-radius: 2px;
+    color: var(--white-color);
+    transition: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.form .form__button:first-child {
+    background-color: var(--secondary-color);
+}
+
+.form .form__button:first-child:hover {
+    background-color: var(--secondary-color);
+}
+
+.form .form__button:last-child {
+    background-color: var(--main-color);
+}
+
+//* FORM NEWSLETTER
+.form-newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+}
+
+.form-newsletter .form__button {
+    color: var(--dark-color);
+    font-weight: bold;
+}
+
+.form-newsletter .form__input {
+    width: 70%;
+}
+
+.form-newsletter .form__input:focus {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+.form-newsletter .form__input:focus::placeholder {
+    color: var(--white-color);
+}
+
+.form-newsletter .form__button {
+    background-color: var(--thirdly-color);
+}

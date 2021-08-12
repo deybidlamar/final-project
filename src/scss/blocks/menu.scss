@@ -1,0 +1,38 @@
+.nav {
+    background-color: var(--main-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.nav__toggle {
+    order: 2;
+    margin-left: auto;
+    display: none;
+}
+
+.nav__dropdown {
+    display: flex;
+    text-align: center;
+}
+
+.nav__item {
+    color: var(--white-color);
+    text-decoration: none;
+    flex: 1 1 100%;
+    display: block;
+    padding: 1em;
+    transition: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.nav__item:hover {
+    border-bottom: 5px solid var(--white-color);
+    color: var(--white-color);
+    font-weight: 700;
+}
+
+.nav__item--active {
+    border-bottom: 5px solid var(--thirdly-color);
+    font-weight: bold;
+}

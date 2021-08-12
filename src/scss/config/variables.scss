@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Satisfy&display=swap");
+//* FONTS
+$title-font: "Satisfy",
+cursive;
+$text-font: "Poppins",
+sans-serif;
+//* COLORS
+$main-color: #a60303;
+$secondary-color: #155902;
+$white-color: #f2f2f2;
+$thirdly-color: #f29f05;
+$fourthly-color: #f2cb05;
+$dark-color: #333;
+:root {
+    //* FONTS
+    --title-font: #{$title-font};
+    --text-font: #{$text-font};
+    //* COLORS
+    --main-color: #{$main-color};
+    --secondary-color: #{$secondary-color};
+    --white-color: #{$white-color};
+    --thirdly-color: #{$thirdly-color};
+    --fourthly-color: #{$fourthly-color};
+    --dark-color: #{$dark-color};
+}

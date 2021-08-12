@@ -1,0 +1,16 @@
+.footer {
+    background-color: var(--dark-color);
+    padding: 1em;
+    text-align: center;
+}
+
+.footer__texts {
+    color: var(--white-color);
+    font-size: 0.7rem;
+}
+
+.footer__link {
+    color: var(--thirdly-color);
+    text-decoration: none;
+    font-size: 0.8rem;
+}
