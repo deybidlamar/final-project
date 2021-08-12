@@ -6,6 +6,7 @@
     width: 100vw;
     display: flex;
     padding: 0.3em 1em;
+    box-shadow: 0 5px 10px opacify($dark-color, .9);
     &__logo {
         font-size: 1.8rem;
         font-weight: bold;
@@ -21,6 +22,9 @@
         outline: 0;
         fill: var(--white-color);
         cursor: pointer;
+        @media screen and (min-width: 1200px) {
+            display: none;
+        }
     }
     &__dropdown {
         text-align: center;
@@ -35,14 +39,29 @@
         &--show {
             transform: translateY(8%);
         }
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            transform: translateY(0);
+            position: initial;
+            background-color: transparent;
+            box-shadow: none;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
     }
     &__item {
         color: var(--secondary-color);
         text-decoration: none;
-        flex: 1 1 100%;
         display: block;
         padding: 1em;
+        text-transform: capitalize;
         transition: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+        @media screen and (min-width: 1200px) {
+            flex: 1 1 100%;
+            font-size: 1.2rem;
+            color: var(--white-color);
+        }
         &:hover {
             background-color: var(--main-color);
             color: var(--white-color);

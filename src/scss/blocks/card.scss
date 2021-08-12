@@ -3,6 +3,9 @@
     border-radius: 0.2em;
     padding-bottom: 2em;
     box-shadow: 0 5px 1.5em opacify($dark-color, .9);
+    @media screen and (min-width: 768px) {
+        width: 45%;
+    }
     &__image {
         max-width: 100%;
         display: block;

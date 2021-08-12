@@ -8,7 +8,7 @@ html(lang='en')
     title Ensalfruit
     // //* CSS LINKS
     link(rel='stylesheet' href='css/styles.css')
-  body
+  body(data-index="1")#home
     // //* MENU SECTION
     nav.nav(role='menu')
       p.nav__logo ENSAL
@@ -18,7 +18,7 @@ html(lang='en')
           path(fill-rule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z')
       .nav__dropdown#nav-dropdown
         a.nav__item.nav__item--active(href='#home' role='menuitem') Home
-        a.nav__item(href='#about' role='menuitem') about Us
+        a.nav__item(href='#about' role='menuitem') About Us
         a.nav__item(href='#products' role='menuitem') Products
         a.nav__item(href='#contact' role='menuitem') Contact Us
         a.nav__item(href='#newsletter' role='menuitem') Newsletter
@@ -30,7 +30,7 @@ html(lang='en')
       p.header__lead Fresh Fruits
 
     // //* ABOUT SECTION 
-    section.about#about 
+    section(data-index="2").about#about 
       h2.about__title About Us
       .about__container
         .about__texts
@@ -46,7 +46,7 @@ html(lang='en')
           p.about__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem voluptatibus nulla deserunt quasi fuga quos, nihil optio sequi nesciunt nam ipsa officiis ab, quisquam eveniet cum ipsam odio omnis placeat.
 
     // //* PRODUCTS SECTION
-    main#products.main
+    main#products.main(data-index="3")
       h2.main__title Products
 
       // //* CARDS
@@ -99,7 +99,7 @@ html(lang='en')
         a.call-us__number(href='+57345689745') +57 345 689 745
     
     // //* CONTACT SECTION
-    section#contact.contact
+    section#contact.contact(data-index="4")
       h2.contact__title Contact Us
       
       form.form(action='#' role='form')
@@ -130,12 +130,12 @@ html(lang='en')
           input#agree.form__input(type='checkbox' name='agree')
           label(for='agree') I'm agree to send this data?
         
-        .form__butons
+        .form__buttons
           button.form__button(type='submit' role='button button--send') Send Message
           button.form__button(type='reset' role='button button--erase') Erase Data
     
     // //* NEWSLETTER SECTION
-    section#newsletter.newsletter
+    section#newsletter.newsletter(data-index="5")
       h2.newsletter__title Newsletter
       iframe.newsletter__frame(src='https://cdn.videvo.net/videvo_files/video/free/2020-05/small_watermarked/200506_Kitchen%20Food_03_4k_002_preview.webm' frameborder='0')
       form.form-newsletter(action='#' role='form')

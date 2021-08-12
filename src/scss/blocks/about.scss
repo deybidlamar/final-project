@@ -11,9 +11,20 @@
         margin-left: auto;
         margin-right: auto;
         display: grid;
+        @media screen and (min-width: 1200px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 2em;
+            place-items: center;
+        }
     }
     &__texts {
         margin-bottom: 1em;
+        @media screen and (min-width: 1200px) {
+            &:last-child {
+                grid-column: 1 / -1;
+            }
+        }
     }
     &__subtitle {
         font-size: 1.6rem;

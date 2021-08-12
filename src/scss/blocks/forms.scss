@@ -2,90 +2,127 @@
 .form {
     display: flex;
     flex-direction: column;
-    gap: 1em;
-}
-
-.form__group {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 1em;
-    align-items: center;
-}
-
-.form__label {
-    font-weight: 800;
-}
-
-.form__input {
-    grid-column: 2 / 3;
-    padding: 1em;
-    resize: none;
-    border: 0;
-    outline: 0;
-    border-radius: 2px;
-}
-
-.form__input:focus {
-    background-color: #f29f0561;
-}
-
-.form__input--message {
-    height: 9em;
-}
-
-.form__checkbox {
-    font-weight: bold;
-}
-
-.form__button {
-    border: 0;
-    cursor: pointer;
-    outline: 0;
-    padding: 1rem;
-    border-radius: 2px;
-    color: var(--white-color);
-    transition: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-.form .form__button:first-child {
-    background-color: var(--secondary-color);
-}
-
-.form .form__button:first-child:hover {
-    background-color: var(--secondary-color);
-}
-
-.form .form__button:last-child {
-    background-color: var(--main-color);
+    gap: 2em;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width: 1200px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr) 4em 4em;
+        gap: 1em;
+    }
+    &__group {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        @media screen and (min-width: 1200px) {
+            &:nth-of-type(1) {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+            }
+            &:nth-of-type(2) {
+                grid-column: 1 / -1;
+                grid-row: 2 / 3;
+            }
+            &:nth-of-type(3) {
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+            }
+            &:nth-of-type(4) {
+                grid-column: 1 / -1;
+                grid-row: 3 /4;
+            }
+        }
+    }
+    &__label {
+        font-weight: 800;
+        align-self: flex-start;
+    }
+    &__input {
+        font-size: 1rem;
+        grid-column: 2 / 3;
+        padding: 1em;
+        resize: none;
+        border: 0;
+        outline: 0;
+        border-radius: 2px;
+    }
+    &__input:focus {
+        background-color: #f29f0561;
+    }
+    &__input--message {
+        height: 9em;
+    }
+    &__checkbox {
+        font-weight: bold;
+        @media screen and (min-width: 1200px) {
+            grid-column: 1 / -1;
+            grid-row: 4 / 5;
+            place-self: center;
+        }
+    }
+    &__buttons {
+        @media screen and (min-width: 1200px) {
+            grid-column: 1 / -1;
+            grid-row: 5 / 6;
+            place-self: center;
+        }
+    }
+    &__button {
+        border: 0;
+        cursor: pointer;
+        outline: 0;
+        padding: 1rem;
+        border-radius: 2px;
+        color: var(--white-color);
+        transition: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    & &__button:first-child {
+        background-color: var(--secondary-color);
+    }
+    & &__button:first-child:hover {
+        background-color: var(--secondary-color);
+    }
+    & &__button:last-child {
+        background-color: var(--main-color);
+    }
 }
 
 //* FORM NEWSLETTER
 .form-newsletter {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1em;
-    width: 100%;
-}
-
-.form-newsletter .form__button {
-    color: var(--dark-color);
-    font-weight: bold;
-}
-
-.form-newsletter .form__input {
-    width: 70%;
-}
-
-.form-newsletter .form__input:focus {
-    background-color: var(--secondary-color);
-    color: var(--white-color);
-}
-
-.form-newsletter .form__input:focus::placeholder {
-    color: var(--white-color);
-}
-
-.form-newsletter .form__button {
-    background-color: var(--thirdly-color);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+    }
+    & .form__button {
+        color: var(--dark-color);
+        font-weight: bold;
+        @media screen and (min-width: 768px) {
+            font-size: .9rem;
+        }
+    }
+    & .form__input {
+        width: 100%;
+        @media screen and (min-width: 768px) {
+            width: 70%;
+        }
+    }
+    & .form__input:focus {
+        background-color: var(--secondary-color);
+        color: var(--white-color);
+    }
+    & .form__input:focus::placeholder {
+        color: var(--white-color);
+    }
+    & .form__button {
+        background-color: var(--thirdly-color);
+    }
 }
