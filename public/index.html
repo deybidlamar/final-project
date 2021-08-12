@@ -7,42 +7,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ensalfruit</title>
     <!-- //* CSS LINKS-->
-    <link rel="stylesheet" href="css/normalize.css?t=1628732002163">
-    <link rel="stylesheet" href="css/styles.css?t=1628732002163">
+    <link rel="stylesheet" href="css/styles.css?t=1628790312905">
   </head>
   <body>
     <!-- //* MENU SECTION-->
     <nav class="nav" role="menu">
-      <button class="nav__toggle" role="button">
-        <svg class="nav__hamburguer" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+      <p class="nav__logo">ENSAL<span class="nav__logo--color">FRUIT</span></p>
+      <button class="nav__toggle" id="nav-toggle" role="button">
+        <svg class="nav__hamburguer" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="inherit" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
         </svg>
       </button>
-      <div class="nav__dropdown"><a class="nav__item nav__item--active" href="#home" role="menuitem">Home</a><a class="nav__item" href="#about" role="menuitem">About Us</a><a class="nav__item" href="#products" role="menuitem">Products</a><a class="nav__item" href="#newsletter" role="menuitem">Newsletter</a><a class="nav__item" href="#contact" role="menuitem">Contact Us</a></div>
+      <div class="nav__dropdown" id="nav-dropdown"><a class="nav__item nav__item--active" href="#home" role="menuitem">Home</a><a class="nav__item" href="#about" role="menuitem">about Us</a><a class="nav__item" href="#products" role="menuitem">Products</a><a class="nav__item" href="#contact" role="menuitem">Contact Us</a><a class="nav__item" href="#newsletter" role="menuitem">Newsletter</a></div>
     </nav>
     <!-- //* HEADER SECTION-->
     <header class="header" id="home">
-      <h1 class="header__title">ENSALFRUIT</h1>
+      <h1 class="header__title">ENSAL<span class="header__title--color">FRUIT</span></h1>
       <p class="header__lead">Fresh Fruits</p>
     </header>
+    <!-- //* ABOUT SECTION -->
+    <section class="about" id="about"> 
+      <h2 class="about__title">About Us</h2>
+      <div class="about__container">
+        <div class="about__texts">
+          <h3 class="about__subtitle">Mision</h3>
+          <p class="about__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem voluptatibus nulla deserunt quasi fuga quos, nihil optio sequi nesciunt nam ipsa officiis ab, quisquam eveniet cum ipsam odio omnis placeat.</p>
+        </div>
+        <div class="about__texts">
+          <h3 class="about__subtitle">Vision</h3>
+          <p class="about__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem voluptatibus nulla deserunt quasi fuga quos, nihil optio sequi nesciunt nam ipsa officiis ab, quisquam eveniet cum ipsam odio omnis placeat.</p>
+        </div>
+        <div class="about__texts">
+          <h3 class="about__subtitle">Stories</h3>
+          <p class="about__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem voluptatibus nulla deserunt quasi fuga quos, nihil optio sequi nesciunt nam ipsa officiis ab, quisquam eveniet cum ipsam odio omnis placeat.</p>
+          <p class="about__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem voluptatibus nulla deserunt quasi fuga quos, nihil optio sequi nesciunt nam ipsa officiis ab, quisquam eveniet cum ipsam odio omnis placeat.</p>
+          <p class="about__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem voluptatibus nulla deserunt quasi fuga quos, nihil optio sequi nesciunt nam ipsa officiis ab, quisquam eveniet cum ipsam odio omnis placeat.</p>
+        </div>
+      </div>
+    </section>
     <!-- //* PRODUCTS SECTION-->
     <main class="main" id="products">
       <h2 class="main__title">Products</h2>
       <!-- //* CARDS-->
       <section class="products">
-        <article class="card"><img class="card__image" src="https://source.unsplash.com/random/300x150" alt="Image">
+        <article class="card"><img class="card__image" src="https://source.unsplash.com/random/1280x720" alt="Image">
           <div class="card__body">
             <h2 class="card__title">Ensalfruit Beginning</h2>
             <p class="card__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, libero.</p><a class="button button--outline" href="#">Read More</a>
           </div>
         </article>
-        <article class="card"><img class="card__image" src="https://source.unsplash.com/random/300x150" alt="Image">
+        <article class="card"><img class="card__image" src="https://source.unsplash.com/random/1280x720" alt="Image">
           <div class="card__body">
             <h2 class="card__title">Ensalfruit Medium</h2>
             <p class="card__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, libero.</p><a class="button button--outline" href="#">Read More</a>
           </div>
         </article>
-        <article class="card"><img class="card__image" src="https://source.unsplash.com/random/300x150" alt="Image">
+        <article class="card"><img class="card__image" src="https://source.unsplash.com/random/1280x720" alt="Image">
           <div class="card__body">
             <h2 class="card__title">Ensalfruit Expert</h2>
             <p class="card__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, libero.</p><a class="button button--outline" href="#">Read More</a>
@@ -77,10 +97,10 @@
         </table>
       </section>
     </main>
-    <!-- //* ABOUT SECTION-->
-    <section class="about">
-      <div class="about__texts">
-        <p class="about__subtitle">Call Us Now!</p><a class="about__number" href="+57345689745">+57 345 689 745</a>
+    <!-- //* CALL US SECTION-->
+    <section class="call-us">
+      <div class="call-us__texts">
+        <p class="call-us__subtitle">Call Us Now!</p><a class="call-us__number" href="+57345689745">+57 345 689 745</a>
       </div>
     </section>
     <!-- //* CONTACT SECTION-->
@@ -132,5 +152,6 @@
     </section>
     <!-- //* FOOTER SECTION-->
     <footer class="footer"><small class="footer__texts">© 2021 All Rights Reserved. Created by <a class="footer__link" href="#">Deybi D. Lamar</a></small></footer>
+    <script src="js/scripts-min.js?t=1628790312905"> </script>
   </body>
 </html>

@@ -1,27 +1,25 @@
 .card {
     background-color: var(--fourthly-color);
     border-radius: 0.2em;
-}
-
-.card__image {
-    max-width: 100%;
-    display: block;
-    object-fit: cover;
-    border-top-left-radius: 0.2em;
-    border-top-right-radius: 0.2em;
-}
-
-.card__body {
-    padding: 0.3rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.card__title {
-    flex-grow: 1;
-}
-
-.card__description {
-    flex-grow: 2;
+    padding-bottom: 2em;
+    box-shadow: 0 5px 1.5em opacify($dark-color, .9);
+    &__image {
+        max-width: 100%;
+        display: block;
+        object-fit: cover;
+        border-top-left-radius: 0.2em;
+        border-top-right-radius: 0.2em;
+    }
+    &__body {
+        padding: 0.3rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        flex-grow: 1;
+    }
+    &__description {
+        flex-grow: 2;
+    }
 }

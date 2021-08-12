@@ -10,6 +10,11 @@
     margin-bottom: 2em;
 }
 
+.table tr:hover {
+    background-color: lighten($secondary-color, 20%);
+    font-weight: bold;
+}
+
 .table th,
 .table td {
     border: 1.5px dashed var(--secondary-color);
