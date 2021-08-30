@@ -15,9 +15,9 @@ import terser from 'gulp-terser'
 import pug from 'gulp-pug'
 
 //SASS
-import dartSass from 'sass';
-import gulpSass from 'gulp-sass';
-const sass = gulpSass(dartSass)
+import dartSass from 'sass'
+import gulpSass from 'gulp-sass'
+
 
 //Common
 import concat from 'gulp-concat'
@@ -40,10 +40,33 @@ import plumber from 'gulp-plumber'
 //Typescript
 import ts from 'gulp-typescript'
 
+//Variables/constants
 const production = false
-
-//Variables/constantes
+const sass = gulpSass(dartSass)
 const cssPlugins = [cssnano(), autoprefixer()]
+
+gulp.task('html-min', () => {
+    return gulp
+        .src('./src/*.html')
+        .pipe(plumber())
+        .pipe(
+            htmlmin({
+                collapseWhitespace: true,
+                removeComments: true
+            })
+        )
+        .pipe(gulp.dest('./public'))
+})
+
+gulp.task('styles', () => {
+    return gulp
+        .src('./src/css/*.css')
+        .pipe(plumber())
+        .pipe(concat('styles-min.css'))
+        .pipe(postcss(cssPlugins))
+        .pipe(gulp.dest('./public/css'))
+        .pipe(stream())
+})
 
 gulp.task('babel', () => {
     return gulp
@@ -98,6 +121,20 @@ gulp.task('clean', () => {
         .pipe(gulp.dest('./public/css'))
 })
 
+gulp.task('imgmin', () => {
+    return gulp
+        .src('./src/assets/images/*')
+        .pipe(plumber())
+        .pipe(
+            imagemin([
+                imagemin.gifsicle({ interlaced: true }),
+                imagemin.mozjpeg({ quality: 30, progressive: true }),
+                imagemin.optipng({ optimizationLevel: 1 })
+            ])
+        )
+        .pipe(gulp.dest('./public/assets/images'))
+})
+
 gulp.task('typescript', () => {
     return gulp
         .src('src/ts/*.ts')
@@ -107,15 +144,20 @@ gulp.task('typescript', () => {
                 outFile: 'using-ts.js'
             })
         )
-        .pipe(gulp.dest('public/js'));
+        .pipe(gulp.dest('public/js'))
 })
 
 gulp.task('default', () => {
     server({
         server: './public'
     })
+
+    // gulp.watch('./src/*.html', gulp.series('html-min')).on('change', reload)
+    // gulp.watch('./src/css/*.css', gulp.series('styles'))
+
     gulp.watch('./src/views/**/*.pug', gulp.series('views')).on('change', reload)
     gulp.watch('./src/scss/**/*.scss', gulp.series('sass'))
     gulp.watch('./src/js/*.js', gulp.series('babel')).on('change', reload)
-        //gulp.watch('./src/ts/*.ts', gulp.series('typescript')).on('change', reload)
+
+    //gulp.watch('./src/ts/*.ts', gulp.series('typescript')).on('change', reload)
 })

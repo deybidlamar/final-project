@@ -1,36 +1,87 @@
 doctype html
-html(lang='en')
+html(lang='zxx')
   head
     // //* METATAGS
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    title Ensalfruit
+    //* METATAGS FOR SEO
+    meta(name='author' content='Deybi D. Lamar')
+    meta(name='description' content='Ensalfruit is specialized in fruit salads so we offer a different posibilities to share incredible moments with friends and family.')
+    meta(name='copyright' content='Deybi D. Lamar')
+    meta(name='copyright' content='Deybi D. Lamar')
+    meta(name='robots' content='index, follow')
+    // OPENGRAPH
+    meta(property='og:title' content='Ensalfruit | Find a universe of ensalfruits to eat with family and friends!')
+    meta(property='og:site_name' content='Ensalfruit')
+    meta(property='og:url' content='https://www.ensalfruit.com')
+    meta(property='og:description' content='Ensalfruit is specialized in fruit salads so we offer a different posibilities to share incredible moments with friends and family.')
+    meta(property='og:type' content='website')
+    meta(property='og:image' content='https://drive.google.com/uc?export=view&id=1n6d1F7Yx1ikY6UWyoAfjrYzHegt-vJhJ')
+    // TWITTER CARD
+    meta(name='twitter:card' content='app')
+    meta(name='twitter:site' content='@ensalfruit')
+    meta(name='twitter:description' content='')
+    meta(name='twitter:app:name:iphone' content='Ensalfruit | Find a universe of ensalfruits to eat with family and friends!')
+    meta(name='twitter:app:id:iphone' content='sales@ensalfruit.com')
+    meta(name='twitter:app:name:ipad' content='Ensalfruit | Find a universe of ensalfruits to eat with family and friends!')
+    meta(name='twitter:app:id:ipad' content='sales@ensalfruit.com')
+    meta(name='twitter:app:name:googleplay' content='Ensalfruit | Find a universe of ensalfruits to eat with family and friends!')
+    meta(name='twitter:app:id:googleplay' content='sales@ensalfruit.com')
+    meta(name='twitter:app:country' content='Colombia')
+
+
+    title Ensalfruit | Find a universe of ensalfruits to eat with family and friends!
+
+    //SEO
+    link(rel="canonical", href="ensalfruit.com")
     // //* CSS LINKS
     link(rel='stylesheet' href='css/styles.css')
-  body(data-index="1")#home
+    // FAVICON
+    link(rel='apple-touch-icon' sizes='57x57' href='assets/images/apple-icon-57x57.png')
+    link(rel='apple-touch-icon' sizes='60x60' href='assets/images/apple-icon-60x60.png')
+    link(rel='apple-touch-icon' sizes='72x72' href='assets/images/apple-icon-72x72.png')
+    link(rel='apple-touch-icon' sizes='76x76' href='assets/images/apple-icon-76x76.png')
+    link(rel='apple-touch-icon' sizes='114x114' href='assets/images/apple-icon-114x114.png')
+    link(rel='apple-touch-icon' sizes='120x120' href='assets/images/apple-icon-120x120.png')
+    link(rel='apple-touch-icon' sizes='144x144' href='assets/images/apple-icon-144x144.png')
+    link(rel='apple-touch-icon' sizes='152x152' href='assets/images/apple-icon-152x152.png')
+    link(rel='apple-touch-icon' sizes='180x180' href='assets/images/apple-icon-180x180.png')
+    link(rel='icon' type='image/png' sizes='192x192' href='assets/images/android-icon-192x192.png')
+    link(rel='icon' type='image/png' sizes='32x32' href='assets/images/favicon-32x32.png')
+    link(rel='icon' type='image/png' sizes='96x96' href='assets/images/favicon-96x96.png')
+    link(rel='icon' type='image/png' sizes='16x16' href='assets/images/favicon-16x16.png')
+    link(rel='manifest' href='assets/images/manifest.json')
+    meta(name='msapplication-TileColor' content='#ffffff')
+    meta(name='msapplication-TileImage' content='assets/images/ms-icon-144x144.png')
+    meta(name='theme-color' content='#ffffff')
+
+
+
+
+  body(data-index="1")#home1
     // //* MENU SECTION
-    nav.nav(role='menu')
+    nav.nav(role='menu' aria-label="Menu Navigation")
       p.nav__logo ENSAL
         span.nav__logo--color FRUIT
-      button.nav__toggle#nav-toggle(role='button')
-        svg.nav__hamburguer(xmlns='http://www.w3.org/2000/svg' width='48' height='48' fill='inherit' viewBox='0 0 16 16')
+      button.nav__toggle#nav-toggle(aria-label="Menu Button")
+        svg.nav__hamburguer(xmlns='http://www.w3.org/2000/svg' width='48' height='48' fill='inherit' viewbox='0 0 16 16')
           path(fill-rule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z')
       .nav__dropdown#nav-dropdown
-        a.nav__item.nav__item--active(href='#home' role='menuitem') Home
-        a.nav__item(href='#about' role='menuitem') About Us
-        a.nav__item(href='#products' role='menuitem') Products
-        a.nav__item(href='#contact' role='menuitem') Contact Us
-        a.nav__item(href='#newsletter' role='menuitem') Newsletter
+        a.nav__item.nav__item--active(href='#home' role='menuitem' aria-label="Home link to section") Home
+        a.nav__item(href='#about' role='menuitem' aria-label="About Us link to section") About Us
+        a.nav__item(href='#products' role='menuitem' aria-label="Products link to section") Products
+        a.nav__item(href='#contact' role='menuitem' aria-label="Contact Us link to section") Contact Us
+        a.nav__item(href='#newsletter' role='menuitem' aria-label="Newsletter link to section") Newsletter
     
     // //* HEADER SECTION
-    header#home.header
+    header#home.header(aria-label="Ensalfruit Fresh Fruits!")
       h1.header__title ENSAL
         span.header__title--color FRUIT
       p.header__lead Fresh Fruits
 
     // //* ABOUT SECTION 
-    section(data-index="2").about#about 
+    section(data-index="2" role="complementary" aria-label="Know about enterprise").about#about 
       h2.about__title About Us
       .about__container
         .about__texts
@@ -46,34 +97,34 @@ html(lang='en')
           p.about__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem voluptatibus nulla deserunt quasi fuga quos, nihil optio sequi nesciunt nam ipsa officiis ab, quisquam eveniet cum ipsam odio omnis placeat.
 
     // //* PRODUCTS SECTION
-    main#products.main(data-index="3")
+    main#products.main(data-index="3" aria-label="Different products and prices")
       h2.main__title Products
 
       // //* CARDS
-      section.products
-        article.card
-          img.card__image(src='https://source.unsplash.com/random/1280x720' alt='Image')
+      section.products(role="complementary" aria-label="Know about our products and levels")
+        article.card(aria-label="Product 1: Ensalfruit Beginner")
+          img.card__image(src='https://source.unsplash.com/random/1280x720' alt='Image' aria-label="Ensalfruit Product Beginner")
           .card__body
-            h2.card__title Ensalfruit Beginning
+            h2.card__title Ensalfruit Beginner
             p.card__description Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, libero.
             a.button.button--outline(href='#') Read More
         
-        article.card
-          img.card__image(src='https://source.unsplash.com/random/1280x720' alt='Image')
+        article.card(aria-label="Product 2: Ensalfruit Medium")
+          img.card__image(src='https://source.unsplash.com/random/1280x720' alt='Image' aria-label="Ensalfruit Product Medium")
           .card__body
             h2.card__title Ensalfruit Medium
             p.card__description Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, libero.
             a.button.button--outline(href='#') Read More
         
-        article.card
-          img.card__image(src='https://source.unsplash.com/random/1280x720' alt='Image')
+        article.card(aria-label="Product 3: Ensalfruit Expert")
+          img.card__image(src='https://source.unsplash.com/random/1280x720' alt='Image' aria-label="Ensalfruit Product Expert")
           .card__body
             h2.card__title Ensalfruit Expert
             p.card__description Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, libero.
             a.button.button--outline(href='#') Read More
       
       // //* PRICES TABLE
-      section.prices
+      section.prices(aria-label="Find the prices about our products")
         h2.prices__title Prices
         table.table
           caption.table__title List of Prices
@@ -93,16 +144,16 @@ html(lang='en')
               td $12.99
 
     // //* CALL US SECTION
-    section.call-us
+    section.call-us(aria-label="If you need to contact us please use the number below")
       .call-us__texts
-        p.call-us__subtitle Call Us Now!
-        a.call-us__number(href='+57345689745') +57 345 689 745
+        h2.call-us__subtitle Call Us Now!
+        a.call-us__number(href='tel:+57345689745') +57 345 689 745
     
     // //* CONTACT SECTION
-    section#contact.contact(data-index="4")
+    section#contact.contact(data-index="4" role="complementary" aria-label="Contact Section")
       h2.contact__title Contact Us
       
-      form.form(action='#' role='form')
+      form.form(action='#' aria-label="Contact us now if you have a doubt")
         .form__group
           label.form__label(for='name') Name:
           input#name.form__input(type='text' name='name' placeholder='Your name here')
@@ -131,21 +182,21 @@ html(lang='en')
           label(for='agree') I'm agree to send this data?
         
         .form__buttons
-          button.form__button(type='submit' role='button button--send') Send Message
-          button.form__button(type='reset' role='button button--erase') Erase Data
+          button.form__button.button--send(type='submit') Send Message
+          button.form__button.button--erase(type='reset') Erase Data
     
     // //* NEWSLETTER SECTION
-    section#newsletter.newsletter(data-index="5")
+    section#newsletter.newsletter(data-index="5" aria-label="Please write your email to receive our newsletter")
       h2.newsletter__title Newsletter
-      iframe.newsletter__frame(src='https://cdn.videvo.net/videvo_files/video/free/2020-05/small_watermarked/200506_Kitchen%20Food_03_4k_002_preview.webm' frameborder='0')
-      form.form-newsletter(action='#' role='form')
+      iframe.newsletter__frame(src='https://cdn.videvo.net/videvo_files/video/free/2020-05/small_watermarked/200506_Kitchen%20Food_03_4k_002_preview.webm')
+      form.form-newsletter(action='#' aria-label="Contact Information")
         input.form__input(type='email' placeholder='Your email here')
-        button.form__button(type='submit' role='button') Send me Newsletters!
+        button.form__button(type='submit') Send me Newsletters!
     
     // //* FOOTER SECTION
-    footer.footer
+    footer.footer(aria-label="Footer Section")
       small.footer__texts
-        | © 2021 All Rights Reserved. Created by 
+        | &copy; 2021 All Rights Reserved. Created by 
         a.footer__link(href='#') Deybi D. Lamar
 
     script(src="js/scripts-min.js") 

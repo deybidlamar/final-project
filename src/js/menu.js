@@ -2,7 +2,7 @@ const btnToggle = document.getElementById('nav-toggle')
 const mainMenu = document.getElementById('nav-dropdown')
 
 const menuItems = document.querySelectorAll('.nav__item')
-const home = document.getElementById('home')
+const home = document.getElementById('home1')
 const about = document.getElementById('about')
 const products = document.getElementById('products')
 const contact = document.getElementById('contact')
