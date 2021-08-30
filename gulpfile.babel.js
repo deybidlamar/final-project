@@ -40,6 +40,9 @@ import plumber from 'gulp-plumber'
 //Typescript
 import ts from 'gulp-typescript'
 
+//Sassdoc
+import sassdoc from 'sassdoc'
+
 //Variables/constants
 const production = false
 const sass = gulpSass(dartSass)
@@ -145,6 +148,11 @@ gulp.task('typescript', () => {
             })
         )
         .pipe(gulp.dest('public/js'))
+})
+
+gulp.task('sassdoc', () => {
+    return gulp.src('src/scss/**/*.scss')
+        .pipe(sassdoc());
 })
 
 gulp.task('default', () => {

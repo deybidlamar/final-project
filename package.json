@@ -5,7 +5,9 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "sassdoc": "gulp sassdoc",
+        "imgmin": "gulp imgmin"
     },
     "keywords": [],
     "author": "Deybi D. Lamar",
@@ -31,6 +33,7 @@
         "gulp-terser": "^2.0.1",
         "gulp-typescript": "^6.0.0-alpha.1",
         "sass": "^1.37.5",
+        "sassdoc": "^2.7.3",
         "typescript": "^4.2.4",
         "usedcss": "^1.0.7"
     },

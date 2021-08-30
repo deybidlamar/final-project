@@ -1,15 +1,33 @@
+//// @access public
+//// @author Deybi D. Lamar
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Satisfy&display=swap");
 //* FONTS
+/// Tipografia para titulos
+/// @group Tipografia
 $title-font: "Satisfy",
 cursive;
+/// Tipografia para el body
+/// @group Tipografia
 $text-font: "Poppins",
 sans-serif;
 //* COLORS
+/// Color Principal
+/// @group Colores
 $main-color: #a60303;
+/// Color Secundario
+/// @group Colores
 $secondary-color: #155902;
+/// Color Claro
+/// @group Colores
 $white-color: #f2f2f2;
+/// Color Terciario
+/// @group Colores
 $thirdly-color: #f29f05;
+/// Color Cuaternario
+/// @group Colores
 $fourthly-color: #f2cb05;
+/// Color Oscuro
+/// @group Colores
 $dark-color: #333;
 :root {
     //* FONTS
