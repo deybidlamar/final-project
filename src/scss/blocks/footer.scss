@@ -1,16 +1,20 @@
 .footer {
     background-color: var(--dark-color);
     padding: 1em;
-    text-align: center;
-}
-
-.footer__texts {
-    color: var(--white-color);
-    font-size: 0.7rem;
-}
-
-.footer__link {
-    color: var(--thirdly-color);
-    text-decoration: none;
-    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .7em;
+    &__texts {
+        color: var(--white-color);
+        font-size: 0.7rem;
+    }
+    &__img {
+        width: 3em;
+    }
+    &__link {
+        color: var(--thirdly-color);
+        text-decoration: none;
+        font-size: 0.8rem;
+    }
 }

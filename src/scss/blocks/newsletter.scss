@@ -13,8 +13,9 @@
         text-align: center;
     }
     &__frame {
-        width: 55%;
-        height: 25vh;
+        width: 20em;
+        height: 11.25em;
+        border: 0;
         @media screen and (min-width: 1200px) {
             display: none;
         }
